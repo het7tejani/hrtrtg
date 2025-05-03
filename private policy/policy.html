@@ -1,0 +1,1193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>private policy</title>
+
+    <link rel="stylesheet" href="../base.css">
+    <link rel="stylesheet" href="../footer.css">
+    <style>
+        .container {
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+        }
+
+        .hero {
+            color: #2980b9;
+            padding: 150px 20px;
+            text-align: center;
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            background: white;
+        }
+
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --accent-color: #e74c3c;
+            --text-color: #333;
+            --light-bg: #f9f9f9;
+            --border-color: #ddd;
+        }
+        
+    
+        .privacy-policy-container {
+            max-width: 1536px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+       
+        
+        .privacy-policy {
+            padding: 60px 0;
+        }
+
+        .pp-title{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+        
+        .title-logo{
+            margin-right: 15px;
+        }
+
+        .policy-section {
+            background: white;
+            border-radius: 8px;
+            /* box-shadow: 0 3px 10px rgba(0,0,0,0.1); */
+            padding: 30px;
+            margin-bottom: 30px;
+        }
+        
+        .policy-section h2 {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--border-color);
+        }
+        
+        .policy-section h3 {
+            font-size: 1.5rem;
+            color: var(--secondary-color);
+            margin: 20px 0 10px;
+        }
+        
+        .policy-section p, .policy-section ul {
+            margin-bottom: 15px;
+        }
+        
+        .policy-section ul {
+            padding-left: 20px;
+        }
+        
+        .policy-section li {
+            margin-bottom: 8px;
+        }
+        
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: var(--secondary-color);
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+        
+        .back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .back-to-top:hover {
+            background-color: var(--primary-color);
+        }
+    
+        .copyright {
+            font-size: 14px;
+            color: rgba(255,255,255,0.7);
+        }
+        
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            nav ul {
+                margin-top: 20px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            
+            nav ul li {
+                margin: 0 10px 10px;
+            }
+            
+            .privacy-header h1 {
+                font-size: 28px;
+            }
+            
+            .policy-section {
+                padding: 20px;
+            }
+            
+            .footer-links {
+                flex-direction: column;
+            }
+            
+            .footer-links a {
+                margin: 5px 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <header class="header">
+        <div data-global-resource-path="limelight-2022/templates/partials/header.html">
+
+
+            <div class="content-wrapper">
+                <div class="header-container">
+                    <div class="header-mobile-overlay"></div>
+
+                    <a class="header-logo" href="../home/index.html">
+                        <img class="logo-color" src="../home/logo.png" alt="onclick-logo-full-color" width="78"
+                            height="60" loading="lazy">
+                        <img class="logo-white" src="../home/logo.png" alt="onclick-logo-full-white-2" width="78"
+                            height="60" loading="lazy">
+                    </a>
+
+
+                    <div class="nav" role="menubar">
+
+
+                        <div class="mobile-nav-header">
+                            <img class="logo-color" src="../home/logo.png" alt="onclick-logo-full-color" width="78"
+                                height="60" loading="lazy">
+                            <div class="mobile-trigger--close">
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </div>
+
+
+                        <div class="dropdown__bg">
+                            <div class="dropdown__arrow"></div>
+                            <div class="dropdown__bg-inner"></div>
+                        </div>
+
+
+                        <div class="nav-container">
+
+
+                            <!-- home  -->
+                            <a class="nav-item" role="menuitem" href="../home/index.html">
+                                <div class="nav-item__header">Home</div>
+                            </a>
+
+                            <!-- Technology  -->
+                            <div class="nav-item nav-item--left">
+                                <div class="nav-item__header">
+                                    <a class="nav-item" role="menuitem" href="../services/service.html">
+                                        <div class="nav-item__title">Technologies</div>
+                                    </a>
+                                    <span class="nav-item__icon">
+                                        <svg version="1.0" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 448 512"
+                                            width="15" height="15" aria-hidden="true">
+                                            <g id="chevron-up1_layer">
+                                                <path
+                                                    d="M240.971 130.524l194.343 194.343c9.373 9.373 9.373 24.569 0 33.941l-22.667 22.667c-9.357 9.357-24.522 9.375-33.901.04L224 227.495 69.255 381.516c-9.379 9.335-24.544 9.317-33.901-.04l-22.667-22.667c-9.373-9.373-9.373-24.569 0-33.941L207.03 130.525c9.372-9.373 24.568-9.373 33.941-.001z" />
+                                            </g>
+                                        </svg>
+                                    </span>
+                                </div>
+
+
+                                <div class="dropdown">
+                                    <div class="dropdown-inner-container">
+                                        <div class="dropdown-section-container">
+
+
+                                            <!-- services - MOBILE -->
+                                            <div class="dropdown-section" role="menu">
+                                                <div class="preheader">&amp;MOBILE</div>
+                                                <div class="dropdown-item-container">
+                                                    <a class="dropdown-item" role="menuitem" href="#">
+                                                        <div>
+                                                            <p class="dropdown-item__title">Android</p>
+                                                        </div>
+                                                    </a>
+
+                                                    <a class="dropdown-item" role="menuitem" href="">
+                                                        <div>
+                                                            <p class="dropdown-item__title">IOS</p>
+                                                        </div>
+                                                    </a>
+
+
+                                                    <a class="dropdown-item" role="menuitem" href="">
+                                                        <div>
+                                                            <p class="dropdown-item__title">React-Native</p>
+                                                        </div>
+                                                    </a>
+
+
+                                                    <a class="dropdown-item" role="menuitem" href="">
+                                                        <div>
+                                                            <p class="dropdown-item__title">Flutter</p>
+                                                        </div>
+                                                    </a>
+
+
+                                                    <a class="dropdown-item" role="menuitem" href="">
+                                                        <div>
+                                                            <p class="dropdown-item__title">Ionic</p>
+                                                        </div>
+                                                    </a>
+
+                                                    <a class="dropdown-item" role="menuitem" href="">
+                                                        <div>
+                                                            <p class="dropdown-item__title">Xamarin</p>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                            </div>
+
+                                            <!-- services - front end  -->
+                                            <div class="dropdown-section" role="menu">
+                                                <div class="preheader">FRONT-END</div>
+                                                <div class="dropdown-item-container">
+
+                                                    <a class="dropdown-item" role="menuitem" href="">
+                                                        <div>
+                                                            <p class="dropdown-item__title">Non-Profit</p>
+                                                        </div>
+                                                    </a>
+
+                                                    <a class="dropdown-item" role="menuitem" href="">
+                                                        <div>
+                                                            <p class="dropdown-item__title">React JS</p>
+                                                        </div>
+                                                    </a>
+
+                                                    <a class="dropdown-item" role="menuitem" href="">
+                                                        <div>
+                                                            <p class="dropdown-item__title">Vue</p>
+                                                        </div>
+                                                    </a>
+
+                                                    <a class="dropdown-item" role="menuitem" href="">
+                                                        <div>
+                                                            <p class="dropdown-item__title">Typescript</p>
+                                                        </div>
+                                                    </a>
+
+                                                    <a class="dropdown-item" role="menuitem" href="">
+                                                        <div>
+                                                            <p class="dropdown-item__title">WPF</p>
+                                                        </div>
+                                                    </a>
+
+                                                    <a class="dropdown-item" role="menuitem" href="">
+                                                        <div>
+                                                            <p class="dropdown-item__title">HTML 5</p>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                            </div>
+
+                                            <!-- services - BACK-END  -->
+                                            <div class="dropdown-section" role="menu">
+                                                <div class="preheader">BACK-END</div>
+                                                <div class="dropdown-item-container">
+
+                                                    <a class="dropdown-item" role="menuitem" href="">
+                                                        <div>
+                                                            <p class="dropdown-item__title">Node</p>
+                                                        </div>
+                                                    </a>
+
+                                                    <a class="dropdown-item" role="menuitem" href="">
+                                                        <div>
+                                                            <p class="dropdown-item__title">Php</p>
+                                                        </div>
+                                                    </a>
+
+                                                    <a class="dropdown-item" role="menuitem" href="">
+                                                        <div>
+                                                            <p class="dropdown-item__title">ASP.Net</p>
+                                                        </div>
+                                                    </a>
+
+                                                    <a class="dropdown-item" role="menuitem" href="">
+                                                        <div>
+                                                            <p class="dropdown-item__title">Java</p>
+                                                        </div>
+                                                    </a>
+
+                                                    <a class="dropdown-item" role="menuitem" href="">
+                                                        <div>
+                                                            <p class="dropdown-item__title">Python</p>
+                                                        </div>
+                                                    </a>
+
+                                                    <a class="dropdown-item" role="menuitem" href="">
+                                                        <div>
+                                                            <p class="dropdown-item__title">laravel</p>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                            </div>
+
+                                            <!-- services - Database  -->
+                                            <div class="dropdown-section" role="menu">
+                                                <div class="preheader">DATABASE</div>
+                                                <div class="dropdown-item-container">
+
+                                                    <a class="dropdown-item" role="menuitem" href="">
+                                                        <div>
+                                                            <p class="dropdown-item__title">MySQL</p>
+                                                        </div>
+                                                    </a>
+
+                                                    <a class="dropdown-item" role="menuitem" href="">
+                                                        <div>
+                                                            <p class="dropdown-item__title">Dynamo DB</p>
+                                                        </div>
+                                                    </a>
+
+                                                    <a class="dropdown-item" role="menuitem" href="">
+                                                        <div>
+                                                            <p class="dropdown-item__title">PostgreSQL</p>
+                                                        </div>
+                                                    </a>
+
+                                                    <a class="dropdown-item" role="menuitem" href="">
+                                                        <div>
+                                                            <p class="dropdown-item__title">Oracle</p>
+                                                        </div>
+                                                    </a>
+
+                                                    <a class="dropdown-item" role="menuitem" href="">
+                                                        <div>
+                                                            <p class="dropdown-item__title">Mongo DB</p>
+                                                        </div>
+                                                    </a>
+
+                                                    <a class="dropdown-item" role="menuitem" href="">
+                                                        <div>
+                                                            <p class="dropdown-item__title">Redis</p>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                            </div>
+
+                                            <!-- services -INFRA & DEVOPS  -->
+                                            <div class="dropdown-section" role="menu">
+                                                <div class="preheader">INFRA & DEVOPS</div>
+                                                <div class="dropdown-item-container">
+
+                                                    <a class="dropdown-item" role="menuitem" href="">
+                                                        <div>
+                                                            <p class="dropdown-item__title">AWS</p>
+                                                        </div>
+                                                    </a>
+
+                                                    <a class="dropdown-item" role="menuitem" href="">
+                                                        <div>
+                                                            <p class="dropdown-item__title">Google Cloud</p>
+                                                        </div>
+                                                    </a>
+
+                                                    <a class="dropdown-item" role="menuitem" href="">
+                                                        <div>
+                                                            <p class="dropdown-item__title">Azure</p>
+                                                        </div>
+                                                    </a>
+
+                                                    <a class="dropdown-item" role="menuitem" href="">
+                                                        <div>
+                                                            <p class="dropdown-item__title">Gradle</p>
+                                                        </div>
+                                                    </a>
+
+                                                    <a class="dropdown-item" role="menuitem" href="">
+                                                        <div>
+                                                            <p class="dropdown-item__title">Jenkins</p>
+                                                        </div>
+                                                    </a>
+
+                                                    <a class="dropdown-item" role="menuitem" href="">
+                                                        <div>
+                                                            <p class="dropdown-item__title">Selenium</p>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                            </div>
+
+                                            <!-- services - CMS  -->
+                                            <div class="dropdown-section" role="menu">
+                                                <div class="preheader">CMS</div>
+                                                <div class="dropdown-item-container">
+
+                                                    <a class="dropdown-item" role="menuitem" href="">
+                                                        <div>
+                                                            <p class="dropdown-item__title">Magento</p>
+                                                        </div>
+                                                    </a>
+
+                                                    <a class="dropdown-item" role="menuitem" href="">
+                                                        <div>
+                                                            <p class="dropdown-item__title">WordPress</p>
+                                                        </div>
+                                                    </a>
+
+                                                    <a class="dropdown-item" role="menuitem" href="">
+                                                        <div>
+                                                            <p class="dropdown-item__title">Shopify</p>
+                                                        </div>
+                                                    </a>
+
+                                                    <a class="dropdown-item" role="menuitem" href="">
+                                                        <div>
+                                                            <p class="dropdown-item__title">Umbraco</p>
+                                                        </div>
+                                                    </a>
+
+                                                    <a class="dropdown-item" role="menuitem" href="">
+                                                        <div>
+                                                            <p class="dropdown-item__title">Drupal</p>
+                                                        </div>
+                                                    </a>
+
+                                                    <a class="dropdown-item" role="menuitem" href="">
+                                                        <div>
+                                                            <p class="dropdown-item__title">Joomla</p>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <!-- services  -->
+                            <div class="nav-item nav-item--left">
+                                <div class="nav-item__header">
+                                    <a class="nav-item" role="menuitem" href="../services/service.html">
+                                        <div class="nav-item__title">services</div>
+                                    </a>
+                                    <span class="nav-item__icon">
+                                        <svg version="1.0" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 448 512"
+                                            width="15" height="15" aria-hidden="true">
+                                            <g id="chevron-up1_layer">
+                                                <path
+                                                    d="M240.971 130.524l194.343 194.343c9.373 9.373 9.373 24.569 0 33.941l-22.667 22.667c-9.357 9.357-24.522 9.375-33.901.04L224 227.495 69.255 381.516c-9.379 9.335-24.544 9.317-33.901-.04l-22.667-22.667c-9.373-9.373-9.373-24.569 0-33.941L207.03 130.525c9.372-9.373 24.568-9.373 33.941-.001z" />
+                                            </g>
+                                        </svg>
+                                    </span>
+
+                                </div>
+
+
+                                <div class="dropdown">
+                                    <div class="dropdown-inner-container">
+                                        <div class="dropdown-section-container">
+                                            <div class="dropdown-section" role="menu">
+                                                <div class="preheader">Web Development</div>
+                                                <div class="dropdown-item-container">
+
+                                                    <a class="dropdown-item" role="menuitem" href="">
+
+                                                        <div>
+                                                            <p class="dropdown-item__title">Frontend Development </p>
+
+                                                        </div>
+                                                    </a>
+
+                                                    <a class="dropdown-item" role="menuitem" href="">
+
+                                                        <div>
+                                                            <p class="dropdown-item__title">Backend Development </p>
+
+                                                        </div>
+                                                    </a>
+
+                                                    <a class="dropdown-item" role="menuitem" href="">
+
+                                                        <div>
+                                                            <p class="dropdown-item__title">CMS Development </p>
+
+                                                        </div>
+                                                    </a>
+
+                                                    <a class="dropdown-item" role="menuitem" href="">
+
+                                                        <div>
+                                                            <p class="dropdown-item__title">Web Application Development
+                                                            </p>
+
+                                                        </div>
+                                                    </a>
+
+                                                    <a class="dropdown-item" role="menuitem" href="">
+
+                                                        <div>
+                                                            <p class="dropdown-item__title">Website Maintenance and
+                                                                Support</p>
+
+                                                        </div>
+                                                    </a>
+
+                                                </div>
+                                            </div>
+
+
+
+                                            <div class="dropdown-section" role="menu">
+                                                <div class="preheader">Mobile App Development</div>
+                                                <div class="dropdown-item-container">
+
+                                                    <a class="dropdown-item" role="menuitem" href="">
+
+                                                        <div>
+                                                            <p class="dropdown-item__title">Android App Development</p>
+
+                                                        </div>
+                                                    </a>
+
+                                                    <a class="dropdown-item" role="menuitem" href="">
+
+                                                        <div>
+                                                            <p class="dropdown-item__title">iOS App Development</p>
+
+                                                        </div>
+                                                    </a>
+
+                                                    <a class="dropdown-item" role="menuitem" href="">
+
+                                                        <div>
+                                                            <p class="dropdown-item__title">Cross-platform App
+                                                                Development</p>
+
+                                                        </div>
+                                                    </a>
+
+                                                    <a class="dropdown-item" role="menuitem" href="">
+
+                                                        <div>
+                                                            <p class="dropdown-item__title">App UI/UX Design</p>
+
+                                                        </div>
+                                                    </a>
+
+                                                    <a class="dropdown-item" role="menuitem" href="">
+
+                                                        <div>
+                                                            <p class="dropdown-item__title">App Testing and Quality
+                                                                Assurance</p>
+
+                                                        </div>
+                                                    </a>
+
+                                                </div>
+                                            </div>
+
+
+                                            <div class="dropdown-section" role="menu">
+                                                <div class="preheader">Digital Marketing</div>
+                                                <div class="dropdown-item-container">
+
+                                                    <a class="dropdown-item" role="menuitem" href="">
+
+                                                        <div>
+                                                            <p class="dropdown-item__title">SEO (Search Engine
+                                                                Optimization)</p>
+
+                                                        </div>
+                                                    </a>
+
+                                                    <a class="dropdown-item" role="menuitem" href="">
+
+                                                        <div>
+                                                            <p class="dropdown-item__title">PPC (Pay-Per-Click
+                                                                Advertising)</p>
+
+                                                        </div>
+                                                    </a>
+
+                                                    <a class="dropdown-item" role="menuitem" href="">
+
+                                                        <div>
+                                                            <p class="dropdown-item__title">Content Marketing</p>
+
+                                                        </div>
+                                                    </a>
+
+                                                    <a class="dropdown-item" role="menuitem" href="">
+
+                                                        <div>
+                                                            <p class="dropdown-item__title">Email Marketing Campaigns
+                                                            </p>
+
+                                                        </div>
+                                                    </a>
+
+                                                    <a class="dropdown-item" role="menuitem" href="">
+
+                                                        <div>
+                                                            <p class="dropdown-item__title">Social Media Marketing (SMM)
+                                                            </p>
+
+                                                        </div>
+                                                    </a>
+
+                                                </div>
+                                            </div>
+
+
+                                            <div class="dropdown-section" role="menu">
+                                                <div class="preheader">Cloud Solutions and DevOps</div>
+                                                <div class="dropdown-item-container">
+
+                                                    <a class="dropdown-item" role="menuitem" href="">
+
+                                                        <div>
+                                                            <p class="dropdown-item__title">Cloud Application
+                                                                Development</p>
+
+                                                        </div>
+                                                    </a>
+
+                                                    <a class="dropdown-item" role="menuitem" href="">
+
+                                                        <div>
+                                                            <p class="dropdown-item__title">Cloud Migration Services</p>
+
+                                                        </div>
+                                                    </a>
+
+                                                    <a class="dropdown-item" role="menuitem" href="">
+
+                                                        <div>
+                                                            <p class="dropdown-item__title">DevOps Automation and
+                                                                Consulting</p>
+
+                                                        </div>
+                                                    </a>
+
+                                                    <a class="dropdown-item" role="menuitem" href="">
+
+                                                        <div>
+                                                            <p class="dropdown-item__title">Infrastructure Setup and
+                                                                Management</p>
+
+                                                        </div>
+                                                    </a>
+
+                                                    <a class="dropdown-item" role="menuitem" href="">
+
+                                                        <div>
+                                                            <p class="dropdown-item__title">Cloud Security Solutions</p>
+
+                                                        </div>
+                                                    </a>
+
+                                                </div>
+                                            </div>
+
+
+
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <!-- Portfolio  -->
+                            <div class="nav-item nav-item--right">
+                                <div class="nav-item__header">
+                                    <a class="nav-item" role="menuitem" href="../portfolio/portfolio.html">
+                                        <div class="nav-item__title">Portfolio</div>
+                                    </a>
+                                    <span class="nav-item__icon">
+                                        <svg version="1.0" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 448 512"
+                                            width="15" height="15" aria-hidden="true">
+                                            <g id="chevron-up1_layer">
+                                                <path
+                                                    d="M240.971 130.524l194.343 194.343c9.373 9.373 9.373 24.569 0 33.941l-22.667 22.667c-9.357 9.357-24.522 9.375-33.901.04L224 227.495 69.255 381.516c-9.379 9.335-24.544 9.317-33.901-.04l-22.667-22.667c-9.373-9.373-9.373-24.569 0-33.941L207.03 130.525c9.372-9.373 24.568-9.373 33.941-.001z" />
+                                            </g>
+                                        </svg>
+                                    </span>
+                                </div>
+
+
+                                <div class="dropdown">
+                                    <div class="dropdown-inner-container">
+                                        <div class="dropdown-section-container">
+                                            <div class="dropdown-section" role="menu">
+                                                <div class="dropdown-item-container">
+
+                                                    <a class="dropdown-item" role="menuitem" href="">
+
+                                                        <div>
+                                                            <p class="dropdown-item__title">All Resources</p>
+                                                            <p class="dropdown-item__desc">Projects, Blogs, Case
+                                                                Studies, and Tech Updates
+                                                            </p>
+                                                        </div>
+                                                    </a>
+
+                                                    <a class="dropdown-item" role="menuitem" href="">
+
+                                                        <div>
+                                                            <p class="dropdown-item__title">Web Development Projects</p>
+                                                            <p class="dropdown-item__desc"> Showcase websites built for
+                                                                various industries</p>
+                                                        </div>
+                                                    </a>
+
+                                                    <a class="dropdown-item" role="menuitem" href="">
+
+                                                        <div>
+                                                            <p class="dropdown-item__title">Mobile App Development
+                                                                Projects</p>
+                                                            <p class="dropdown-item__desc">Highlight Android, iOS, and
+                                                                cross-platform mobile apps designed and developed</p>
+                                                        </div>
+                                                    </a>
+
+                                                    <a class="dropdown-item" role="menuitem" href="">
+
+                                                        <div>
+                                                            <p class="dropdown-item__title">Custom Software Solutions
+                                                            </p>
+                                                            <p class="dropdown-item__desc">tailor-made software products
+                                                                and enterprise solutions delivered</p>
+                                                        </div>
+                                                    </a>
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                        <div class="featured-section" role="menu">
+                                            <div class="preheader">Featured Content</div>
+                                            <div class="dropdown-item-container">
+
+                                                <a class="dropdown-item" role="menuitem" href="" target="_blank"
+                                                    rel="noopener">
+
+                                                    <div>
+                                                        <p class="dropdown-item__title">Webinars</p>
+                                                        <p class="dropdown-item__desc">Live Sessions and On-Demand
+                                                            Learning on Tech Topics
+                                                        </p>
+                                                    </div>
+                                                </a>
+
+                                                <a class="dropdown-item" role="menuitem" href="">
+
+                                                    <div>
+                                                        <p class="dropdown-item__title">Top Results </p>
+                                                        <p class="dropdown-item__desc">Our Most Popular Articles, Case
+                                                            Studies, and Resources </p>
+                                                    </div>
+                                                </a>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <!-- Company  -->
+                            <div class="nav-item nav-item--right">
+                                <div class="nav-item__header">
+                                    <div class="nav-item__title" role="menuitem">Company</div>
+
+
+
+
+                                    <span class="nav-item__icon">
+                                        <svg version="1.0" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 448 512"
+                                            width="15" height="15" aria-hidden="true">
+                                            <g id="chevron-up1_layer">
+                                                <path
+                                                    d="M240.971 130.524l194.343 194.343c9.373 9.373 9.373 24.569 0 33.941l-22.667 22.667c-9.357 9.357-24.522 9.375-33.901.04L224 227.495 69.255 381.516c-9.379 9.335-24.544 9.317-33.901-.04l-22.667-22.667c-9.373-9.373-9.373-24.569 0-33.941L207.03 130.525c9.372-9.373 24.568-9.373 33.941-.001z" />
+                                            </g>
+                                        </svg>
+                                    </span>
+
+                                </div>
+
+
+                                <div class="dropdown">
+                                    <div class="dropdown-inner-container">
+                                        <div class="dropdown-section-container">
+                                            <div class="dropdown-section" role="menu">
+                                                <div class="dropdown-item-container">
+
+                                                    <a class="dropdown-item" role="menuitem" href="">
+
+                                                        <div>
+                                                            <p class="dropdown-item__title">Our Company</p>
+                                                            <p class="dropdown-item__desc">Empowering businesses with
+                                                                innovative digital solutions.</p>
+                                                        </div>
+                                                    </a>
+
+                                                    <a class="dropdown-item" role="menuitem" href="">
+
+                                                        <div>
+                                                            <p class="dropdown-item__title">Careers</p>
+                                                            <p class="dropdown-item__desc">Explore exciting
+                                                                opportunities and join our growing team.</p>
+                                                        </div>
+                                                    </a>
+
+                                                    <a class="dropdown-item" role="menuitem" href="">
+
+                                                        <div>
+                                                            <p class="dropdown-item__title">Partner with Us</p>
+                                                            <p class="dropdown-item__desc">Collaborate with us to build
+                                                                future-ready technology solutions.</p>
+                                                        </div>
+                                                    </a>
+
+                                                    <a class="dropdown-item" role="menuitem" href="">
+
+                                                        <div>
+                                                            <p class="dropdown-item__title">Contact Us</p>
+                                                            <p class="dropdown-item__desc">Get in touch with our experts
+                                                                — we're here to help you succeed.</p>
+                                                        </div>
+                                                    </a>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <!-- about us  -->
+                            <a class="nav-item" role="menuitem" href="../about us/about.html">
+                                <div class="nav-item__header">About us</div>
+                            </a>
+
+                        </div>
+
+
+                        <div class="nav-btns">
+                            <!-- <a class="btn btn--secondary" href="https://info.golimelight.com/tour" target="_blank"
+                                        rel="noopener">Try for free</a> -->
+                            <a class="btn btn--clear" href="../contact/contact.html">Contact Us</a>
+                            <a class="nav-item" href="../contact/contact.html">Contact Us</a>
+                        </div>
+                    </div>
+
+
+                    <div class="header-btns header-btns--clear">
+                        <!-- <a class="btn btn--white-secondary btn--sm" href="https://info.golimelight.com/tour"
+                                    target="_blank" rel="noopener">Try for free</a> -->
+                        <a class="btn btn--clear btn--sm" href="../contact/contact.html">Contact Us</a>
+                    </div>
+
+                    <div class="header-btns header-btns--white">
+                        <!-- <a class="btn btn--secondary btn--sm" href="https://info.golimelight.com/tour" target="_blank"
+                                    rel="noopener">Try for free</a> -->
+                        <a class="btn btn--ghost btn--sm" href="../contact/contact.html">Contact Us</a>
+                    </div>
+
+
+                    <div class="mobile-trigger">
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="container">
+        <div class="hero">
+            <!-- <div class="cover">
+                <video autoplay muted loop id="hero-video">
+                    <source src="/home/cover-video.mp4" type="video/mp4">
+                </video>
+            </div> -->
+            <div class="hero-container">
+                <div class="pp-title">
+                    <div class="title-logo">
+                        <img src="../private policy/private policy.png" alt="private policy" height="70px" width="70px">
+                    </div>
+                    <div class="title-name">
+                        <h1>Private Policy</h1>
+                    </div>
+                </div>
+                
+                <p>Effective Date: 22/04/2025<br>Welcome to OnClick Infotech. Your privacy is important to us. This Privacy Policy explains how we
+                    collect, use, disclose, and safeguard your information when you visit our website and use our
+                    services. <br> By using our site, you consent to the practices described in this Privacy Policy.</p>
+                <a href="../contact/contact.html" class="btn btn--clear btn--sm">Read more</a>
+            </div>
+        </div>
+    </section>
+
+    
+</head>
+<body>
+    
+    <main class="privacy-policy">
+        <div class="privacy-policy-container">
+       
+            
+            <div class="policy-section" id="information-we-collect">
+                <h2>1. Information We Collect</h2>
+                <p>We may collect the following types of information:</p>
+                
+                <h3>Personal Information</h3>
+                <p>Name, email address, phone number, company name, job title, and other information you voluntarily provide.</p>
+                
+                <h3>Non-Personal Information</h3>
+                <p>Browser type, IP address, device information, pages visited, time spent on the site, and other anonymous usage data.</p>
+                
+                <h3>Cookies and Tracking Technologies</h3>
+                <p>To enhance your experience, we may use cookies, web beacons, and other tracking technologies to collect information about your interactions with our website.</p>
+            </div>
+            
+            <div class="policy-section" id="how-we-use">
+                <h2>2. How We Use Your Information</h2>
+                <p>We use the information we collect to:</p>
+                <ul>
+                    <li>Provide, operate, and maintain our services</li>
+                    <li>Improve, personalize, and expand our website</li>
+                    <li>Communicate with you, including sending updates, promotional materials, and other information</li>
+                    <li>Understand and analyze how you use our website and services</li>
+                    <li>Prevent fraud and maintain the security of our systems</li>
+                    <li>Comply with legal obligations</li>
+                </ul>
+            </div>
+            
+            <div class="policy-section" id="sharing-information">
+                <h2>3. Sharing Your Information</h2>
+                <p>We do not sell, trade, or rent your personal information to third parties. We may share your information with:</p>
+                
+                <h3>Service Providers</h3>
+                <p>Trusted third-party vendors who assist us in operating our website and delivering services, under confidentiality agreements.</p>
+                
+                <h3>Legal Requirements</h3>
+                <p>If required by law or in response to valid requests by public authorities (e.g., a court or government agency).</p>
+            </div>
+            
+            <div class="policy-section" id="data-security">
+                <h2>4. Data Security</h2>
+                <p>We implement appropriate technical and organizational measures to protect your personal information from unauthorized access, disclosure, alteration, or destruction. However, no method of transmission over the internet or electronic storage is 100% secure.</p>
+            </div>
+            
+            <div class="policy-section" id="privacy-rights">
+                <h2>5. Your Privacy Rights</h2>
+                <p>Depending on your location, you may have the following rights:</p>
+                <ul>
+                    <li>Access, update, or delete your personal information</li>
+                    <li>Object to or restrict the processing of your information</li>
+                    <li>Request portability of your information</li>
+                    <li>Withdraw your consent at any time</li>
+                </ul>
+                <p>To exercise your rights, please contact us at <a href="mailto:privacy@onclicksolution.com">privacy@onclicksolution.com</a>.</p>
+            </div>
+            
+            <div class="policy-section" id="third-party-links">
+                <h2>6. Third-Party Links</h2>
+                <p>Our website may contain links to third-party websites. We are not responsible for the privacy practices of these websites. We encourage you to read their privacy policies before providing any information.</p>
+            </div>
+            
+            <div class="policy-section" id="childrens-privacy">
+                <h2>7. Children's Privacy</h2>
+                <p>Our services are not intended for individuals under the age of 13. We do not knowingly collect personal information from children. If you believe a child has provided us with personal information, please contact us.</p>
+            </div>
+            
+            <div class="policy-section" id="policy-changes">
+                <h2>8. Changes to This Privacy Policy</h2>
+                <p>We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page with a revised "Effective Date."</p>
+                <p>We encourage you to review this Privacy Policy periodically to stay informed about how we are protecting your information.</p>
+            </div>
+            
+            <div class="policy-section" id="contact-us">
+                <h2>9. Contact Us</h2>
+                <p>If you have any questions or concerns about this Privacy Policy or our data practices, please contact us:</p>
+                <address>
+                    OnClick Solution<br>
+                    address<br>
+                    Email: <a href="mailto:privacy@onclicksolution.com">privacy@onclickInfotech.com</a><br>
+                    Phone: [Insert Contact Phone Number]
+                </address>
+            </div>
+        </div>
+    </main>
+
+
+    <!-- footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <!-- <div class="footer-column">
+                    <h3>About Us</h3>
+                    <p>Onclick Infotech is a leading IT services provider helping businesses transform through
+                        technology
+                        since 2021.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div> -->
+
+                <div class="footer-column">
+                    <h3>QUICK LINKS</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="../services/service.html">Services</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="../contact/contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3>SERVICES</h3>
+                    <ul class="footer-links">
+                        <li><a href="../services/service.html">Web Development</a></li>
+                        <li><a href="../services/service.html">Mobile App Development</a></li>
+                        <li><a href="../services/service.html">Cloud Solutions</a></li>
+                        <li><a href="../services/service.html">Search Engine Optimization(SEO)</a></li>
+                        <li><a href="../services/service.html">UI/UX devlopment</a></li>
+                        <li><a href="../services/service.html">AI - ML App Devlopment</a></li>
+                        <li><a href="../services/service.html">Quality Assurance</a></li>
+                        <li><a href="../services/service.html">Mobile Game Development</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3>CONTACT US</h3>
+                    <div class="footer-contact">
+                        <p><i class="fa-solid fa-map-pin"></i>SURAT 395004</p>
+                        <p><i class="fas fa-phone"></i> +1 (123) 456-7890</p>
+                        <p><i class="fas fa-envelope"></i> info@onclickinfotech.com</p>
+                        <p><i class="fas fa-clock"></i> Mon-Fri: 9AM - 5PM</p>
+                    </div>
+                </div>
+
+                <div class="footer-column">
+                    <h3>SOCIAL MEDIA</h3>
+                    <div class="footer-cloumn-social-network">
+                        <div class="social-icon-name">
+                            <div class="social-icon">
+                                <img src="../home/footer logo/facebook.png" alt="" width="30px" height="30px">
+                            </div>
+                            <div class="social-name">Facebook</div>
+                        </div>
+
+                        <div class="social-icon-name">
+                            <div class="social-icon">
+                                <img src="../home/footer logo/instagram.png" alt="" width="30px" height="30px">
+                            </div>
+                            <div class="social-name">Instagram</div>
+                        </div>
+
+                        <div class="social-icon-name">
+                            <div class="social-icon">
+                                <img src="../home/footer logo/LinkedIn.png" alt="" width="30px" height="30px">
+                            </div>
+                            <div class="social-name">Linkedin</div>
+                        </div>
+
+                        <!-- <div class="social-icon-name">
+                            <div class="social-icon">
+                                <img src="../home/footer logo/Upwork.png" alt="" width="30px" height="30px">
+                            </div>
+                            <div class="social-name">Upwork</div>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 Onclick Infotech. All Rights Reserved. | <a href="#">Privacy Policy</a> | <a
+                        href="#">Terms
+                        of Service</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- navigation -->
+    <script src="../home/index.js"></script>
+    <script
+        src="https://www.golimelight.com/hs-fs/hubfs/hub_generated/template_assets/1/74528569421/1743049249606/template_main.min.js"></script>
+    <script
+        src="https://www.golimelight.com/hs-fs/hubfs/hub_generated/template_assets/1/75529380722/1743049259607/template_header.min.js"></script>
+    <script src="../navigation/navigation.js"></script>
+    
+    <script>  
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Update URL without jumping
+                    if (history.pushState) {
+                        history.pushState(null, null, targetId);
+                    } else {
+                        location.hash = targetId;
+                    }
+                }
+            });
+        });
+    </script>
+
+</body>
+
+</html>

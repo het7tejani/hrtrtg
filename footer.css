@@ -1,0 +1,178 @@
+/* Footer Styles */
+.footer {
+  background-color: #0D1820;
+  color: white;
+  padding: 60px 0 30px;
+  position: relative;
+  text-align: center;
+  clear: both;
+  /* Ensures footer clears any floated elements */
+  margin-top: 0;
+  /* Remove any default margin */
+}
+
+.main-content {
+  overflow: hidden;
+  /* Contains any horizontal scrolling */
+  width: 100%;
+}
+
+.footer-container {
+  max-width: 1536px;
+  margin: 0 auto;
+
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr 1fr; /* First column takes 2 fractions, others take 1 */
+  gap: 40px;
+  margin-bottom: 40px;
+  padding-top: 30px;
+  /* border-top: 1px solid rgba(255, 255, 255, 0.1); */
+}
+
+.footer-links {
+  list-style: none;
+}
+
+.footer-links li {
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  color: var(--gray);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: white;
+}
+
+.footer-Navigation p {
+  margin-bottom: 15px;
+  color: var(--gray);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.footer-Navigation i {
+  color: var(--primary);
+  margin-top: px;
+}
+
+.social-icons {
+  display: inline-flex;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+
+.footer-client {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer_logo_image {
+  height: 80px;
+  width: auto;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 30px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  color: var(--gray);
+  font-size: 0.9rem;
+}
+
+.footer-bottom a {
+  color: var(--gray);
+}
+
+.social-icon-name {
+  margin: 20px;
+  display: flex;
+  flex-direction: row;
+  text-align: left;
+}
+
+.social-icon {
+  margin-right: 15px;
+}
+
+.social-icon img {
+  min-width: 30px;
+}
+.social-icon-series{
+  margin: 50px 20px;
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1200px) {
+  .swiper-slide {
+    width: 280px;
+  }
+
+  .project-card {
+    height: 360px;
+  }
+
+  .mySwiperPort {
+    padding-bottom: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .sec-title {
+    font-size: 36px;
+  }
+
+  .swiper-slide {
+    width: 240px;
+  }
+
+  .project-card {
+    height: 320px;
+  }
+
+  .port-margin {
+    margin-right: 20px;
+  }
+
+  .py-80 {
+    padding-top: 60px;
+    padding-bottom: 30px;
+  }
+}
+
+@media (max-width: 576px) {
+  .sec-title {
+    font-size: 28px;
+  }
+
+  .sub-title {
+    font-size: 14px;
+  }
+
+  .swiper-slide {
+    width: 220px;
+  }
+
+  .project-card {
+    height: 280px;
+  }
+
+  .py-80 {
+    padding-top: 40px;
+    padding-bottom: 20px;
+  }
+}
