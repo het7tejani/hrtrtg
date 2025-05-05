@@ -1,67 +1,67 @@
 // digital section 
-"use strict";
 
-        function zikzag_counter_init() {
-            jQuery('.wgl-counter').each(function () {
-                var $counter = jQuery(this);
-                var $value = $counter.find('.wgl-counter__value');
+// JavaScript for the counter animation on scroll
+document.addEventListener('DOMContentLoaded', function () {
+    // Function to animate the numbers
+    function animateValue(element, start, end, duration, interval) {
+        let startTimestamp = null;
+        const step = (timestamp) => {
+            if (!startTimestamp) startTimestamp = timestamp;
+            const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+            const value = Math.floor(progress * (end - start) + start);
+            element.textContent = value;
+            if (progress < 1) {
+                window.requestAnimationFrame(step);
+            }
+        };
+        window.requestAnimationFrame(step);
+    }
 
-                if (!$counter.hasClass('animated')) {
-                    $counter.addClass('animated');
-                    $counter.find('.wgl-counter__placeholder').hide();
+    // Function to check if element is in viewport
+    function isInViewport(element) {
+        const rect = element.getBoundingClientRect();
+        return (
+            rect.top >= 0 &&
+            rect.left >= 0 &&
+            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+            rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+        );
+    }
 
-                    $value.countTo({
-                        from: parseInt($value.data('start-value')) || 0,
-                        to: parseInt($value.data('end-value')) || 100,
-                        speed: parseInt($value.data('speed')) || 2000,
-                        refreshInterval: 50
-                    });
-                }
-            });
-        }
+    // Function to handle scroll events
+    function handleScroll() {
+        const elements = document.querySelectorAll('[data-appear-animation="animateDigits"]');
 
-        jQuery(document).ready(function () {
-            zikzag_counter_init();
+        elements.forEach(element => {
+            if (isInViewport(element) && !element.hasAttribute('data-animated')) {
+                const from = parseInt(element.getAttribute('data-from'));
+                const to = parseInt(element.getAttribute('data-to'));
+                const interval = parseInt(element.getAttribute('data-interval')) || 1;
+                const duration = 2500; // Animation duration in milliseconds
 
-            jQuery('.wgl-counter').appear(function () {
-                zikzag_counter_init();
-            });
+                animateValue(element, from, to, duration, interval);
+                element.setAttribute('data-animated', 'true');
+            }
         });
 
-        // countTo Plugin (if not already available)
-        (function ($) {
-            $.fn.countTo = function (options) {
-                options = options || {};
-                return $(this).each(function () {
-                    var settings = $.extend({}, $.fn.countTo.defaults, options);
-                    var loops = Math.ceil(settings.speed / settings.refreshInterval);
-                    var increment = (settings.to - settings.from) / loops;
-                    var current = settings.from;
-                    var $this = $(this);
-                    var loopCount = 0;
-                    var interval = setInterval(updateTimer, settings.refreshInterval);
+        // Handle the ExpYear element separately if needed
+        const expYearElement = document.getElementById('ExpYear');
+        if (expYearElement && isInViewport(expYearElement) && !expYearElement.hasAttribute('data-animated')) {
+            const currentYear = new Date().getFullYear();
+            const startYear = currentYear - 10; // Assuming company started 10 years ago
+            const yearsOfExperience = currentYear - startYear;
 
-                    function updateTimer() {
-                        current += increment;
-                        loopCount++;
-                        $this.text(Math.round(current));
-                        if (loopCount >= loops) {
-                            $this.text(settings.to);
-                            clearInterval(interval);
-                        }
-                    }
-                });
-            };
+            animateValue(expYearElement, 0, yearsOfExperience, 2000, 1);
+            expYearElement.setAttribute('data-animated', 'true');
+        }
+    }
 
-            $.fn.countTo.defaults = {
-                from: 0,
-                to: 100,
-                speed: 1000,
-                refreshInterval: 100
-            };
-        })(jQuery);
+    // Add scroll event listener
+    window.addEventListener('scroll', handleScroll);
 
-        zikzag_counter_init(); 
+    handleScroll();
+});
+
 
 
 
@@ -219,69 +219,4 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
-  // JavaScript for the counter animation on scroll
-  document.addEventListener('DOMContentLoaded', function () {
-    // Function to animate the numbers
-    function animateValue(element, start, end, duration, interval) {
-        let startTimestamp = null;
-        const step = (timestamp) => {
-            if (!startTimestamp) startTimestamp = timestamp;
-            const progress = Math.min((timestamp - startTimestamp) / duration, 1);
-            const value = Math.floor(progress * (end - start) + start);
-            element.textContent = value;
-            if (progress < 1) {
-                window.requestAnimationFrame(step);
-            }
-        };
-        window.requestAnimationFrame(step);
-    }
-
-    // Function to check if element is in viewport
-    function isInViewport(element) {
-        const rect = element.getBoundingClientRect();
-        return (
-            rect.top >= 0 &&
-            rect.left >= 0 &&
-            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-            rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-        );
-    }
-
-    // Function to handle scroll events
-    function handleScroll() {
-        const elements = document.querySelectorAll('[data-appear-animation="animateDigits"]');
-
-        elements.forEach(element => {
-            if (isInViewport(element) && !element.hasAttribute('data-animated')) {
-                const from = parseInt(element.getAttribute('data-from'));
-                const to = parseInt(element.getAttribute('data-to'));
-                const interval = parseInt(element.getAttribute('data-interval')) || 1;
-                const duration = 2500; // Animation duration in milliseconds
-
-                animateValue(element, from, to, duration, interval);
-                element.setAttribute('data-animated', 'true');
-            }
-        });
-
-        // Handle the ExpYear element separately if needed
-        const expYearElement = document.getElementById('ExpYear');
-        if (expYearElement && isInViewport(expYearElement) && !expYearElement.hasAttribute('data-animated')) {
-            const currentYear = new Date().getFullYear();
-            const startYear = currentYear - 10; // Assuming company started 10 years ago
-            const yearsOfExperience = currentYear - startYear;
-
-            animateValue(expYearElement, 0, yearsOfExperience, 2000, 1);
-            expYearElement.setAttribute('data-animated', 'true');
-        }
-    }
-
-    // Add scroll event listener
-    window.addEventListener('scroll', handleScroll);
-
-    handleScroll();
-});
-
-
-
-
-
+  

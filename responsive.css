@@ -161,21 +161,22 @@
   /* digital section  */
   /* -------------------------------------------------------------------------------------------------------- */
 
+  .hor-row {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin: 25px auto;
+    gap: 20px;
+  }
+
   /* Small Mobile (up to 480px) */
-  @media (max-width: 480px) {
+  @media (min-width: 375px) and (max-width: 575px) {
 
-    .wgl-counter {
-      text-align: center;
+    .dgt-fid-title {
+      font-size: 25px;
     }
 
-    .wgl-counter_value-wrap {
-      font-size: 42px;
-    }
 
-    .wgl-counter__suffix {
-      top: -0.6em;
-      right: -0.5em;
-    }
   }
 
   /* Mobile (up to 767px) */
@@ -185,7 +186,7 @@
       text-align: center;
     }
 
-    .elementor-section .elementor-container {
+    .how-row {
       flex-direction: column;
       align-items: center;
       padding: 0 15px;
@@ -211,7 +212,7 @@
 
   /* iPad (768px - 1024px) */
   @media (min-width: 768px) and (max-width: 1023px) {
-    .elementor-section .elementor-container {
+    .how-row {
       min-width: auto;
       padding: 0 20px;
       flex-wrap: nowrap;
@@ -351,7 +352,12 @@
   /*  footer */
   /* -------------------------------------------------------------------------------------------------------- */
 
-  @media (max-width: 767px) {
+  @media (min-width: 375px) and (max-width: 575px) {
+    .footer-content {
+      display: flex;
+      flex-direction: column;
+    }
+
     .footer-contact p {
       justify-content: center;
     }
@@ -1020,9 +1026,10 @@
     flex-wrap: wrap;
   }
 
-  .description{
+  .description {
     margin: 0;
   }
+
   .view-more-btn {
     display: inline-flex;
     align-items: center;
@@ -1049,20 +1056,20 @@
     transform: rotate(180deg);
   }
 
-  .content-column p{
+  .content-column p {
     font-size: 1rem;
   }
 
-  .content-column h1{
+  .content-column h1 {
     font-size: 2rem;
   }
 
-  .image-column{
+  .image-column {
     margin: 0 auto;
     padding: 0;
   }
 
-  .image-column img{
+  .image-column img {
     height: 80%;
     width: auto;
   }
@@ -1103,15 +1110,16 @@
     .image-column {
       height: 40vh;
     }
-    .image-column img{
+
+    .image-column img {
       height: 70%;
       width: auto;
     }
 
-    .content-column{
+    .content-column {
       justify-content: flex-start;
       padding: 5px 80px;
     }
-  
+
   }
 }
