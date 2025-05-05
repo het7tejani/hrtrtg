@@ -386,12 +386,11 @@ body {
 }
 
 /* digital data */
-.elementor-container {
-  background: url('/home/digital\ bg.png') no-repeat center center / cover;
-  margin: 0px auto;
-  padding: 20px;
-  border-radius: 10px;
+
+.elementor-container{
+  background: url(/home/digital\ bg.png) no-repeat center center/cover;
   max-width: 1536px;
+  margin: 0 auto;
 }
 
 .dgt-fid-title{
@@ -413,6 +412,35 @@ body {
 .dgt-fid{
   text-align: center;
 }
+
+.dgt-fid-contents h1 {
+  position: relative;
+  display: inline-block;
+  padding-right: 0.5em; /* Space for the plus symbol */
+}
+
+.dgt-fid-contents h1 span:last-child,
+.dgt-fid-contents h1 span.ml-5 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 0.7em; /* Smaller than the number */
+  line-height: 1;
+  transform: translateY(-30%); /* Adjust this to fine-tune vertical position */
+  color: var(--primary-xdark);
+  font-weight: bold;
+}
+
+/* For the SVG version (more precise control) */
+.dgt-fid-contents h1 .plus-symbol {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0.6em;
+  height: 0.6em;
+  transform: translateY(-30%);
+}
+
 
 
 

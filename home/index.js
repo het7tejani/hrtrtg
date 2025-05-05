@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 const from = parseInt(element.getAttribute('data-from'));
                 const to = parseInt(element.getAttribute('data-to'));
                 const interval = parseInt(element.getAttribute('data-interval')) || 1;
-                const duration = 2500; // Animation duration in milliseconds
+                const duration = 1500; // Animation duration in milliseconds
 
                 animateValue(element, from, to, duration, interval);
                 element.setAttribute('data-animated', 'true');
