@@ -390,6 +390,7 @@ body {
 .elementor-container{
   background: url(/home/digital\ bg.png) no-repeat center center/cover;
   max-width: 1536px;
+  padding: 30px;
   margin: 0 auto;
 }
 
@@ -480,7 +481,7 @@ body {
 .logo-item img {
   height: auto;
   width: auto;
-  max-height: 60px;
+  max-height: 90px;
   max-width: 120px;
   cursor: pointer;
   object-fit: contain;
