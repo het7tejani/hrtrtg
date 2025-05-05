@@ -1,4 +1,4 @@
-
+// navigation 
 (function () {
     // DOM Elements
     const body = document.querySelector("body");
