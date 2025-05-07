@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="/services/services current.css">
     <link rel="stylesheet" href="../footer.css">
     <link rel="stylesheet" href="/responsive.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     
 </head>
 
@@ -408,7 +407,7 @@
 
 
                                 <!-- services  -->
-                                <div class="nav-item nav-item--left">
+                                <div class="nav-item nav-item--right">
                                     <div class="nav-item__header">
                                         <a href="/services/service.html">
                                             <div class="nav-item__title" role="menuitem">Services</div>
@@ -697,8 +696,6 @@
 
 
                             <div class="nav-btns">
-                                <!-- <a class="btn btn--secondary" href="https://info.golimelight.com/tour" target="_blank"
-                                            rel="noopener">Try for free</a> -->
                                 <a class="btn btn--clear" href="/contact/contact.html">Contact Us</a>
                                 <a class="nav-item" href="/contact/contact.html">We'd love to hear from
                                     you</a>
@@ -707,13 +704,9 @@
 
 
                         <div class="header-btns header-btns--clear">
-                            <!-- <a class="btn btn--white-secondary btn--sm" href="https://info.golimelight.com/tour"
-                                        target="_blank" rel="noopener">Try for free</a> -->
                             <a class="btn btn--clear btn--sm" href="/contact/contact.html">Contact Us</a>
                         </div>
                         <div class="header-btns header-btns--white">
-                            <!-- <a class="btn btn--secondary btn--sm" href="https://info.golimelight.com/tour"
-                                target="_blank" rel="noopener">Try for free</a> -->
                             <a class="btn btn--clear btn--sm" href="/contact/contact.html">Contact Us</a>
                         </div>
 
@@ -939,59 +932,9 @@
         </div>
     </footer>
 
-
-    <script src="./services.js"></script>
-    <script
-        src="https://www.golimelight.com/hs-fs/hubfs/hub_generated/template_assets/1/74528569421/1743049249606/template_main.min.js"></script>
-    <script
-        src="https://www.golimelight.com/hs-fs/hubfs/hub_generated/template_assets/1/75529380722/1743049259607/template_header.min.js"></script>
-    <script src="../navigation/navigation.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const stackItems = document.querySelectorAll('.stack-item');
-            const container = document.querySelector('.image-stack-container');
-
-            // Convert container to a stacking context
-            container.style.position = 'relative';
-            // container.style.height = '300vh';
-
-            // Initial setup
-            function setupInitialStack() {
-                stackItems.forEach((item, index) => {
-                    // Start with all images stacked and slightly transparent
-                    // item.style.opacity = 1 - (index * 0.1);
-                    item.style.zIndex = stackItems.length - index;
-                });
-            }
-
-            // Scroll animation
-            function animateOnScroll() {
-                const scrollPosition = window.scrollY;
-                const containerTop = container.offsetTop;
-                const containerHeight = container.offsetHeight;
-                const windowHeight = window.innerHeight;
-
-                // Calculate scroll progress (0 to 1) through the container
-                const scrollProgress = Math.min(Math.max((scrollPosition - containerTop + windowHeight * 0.3) / (containerHeight * 0.7), 0, 1));
-
-                stackItems.forEach((item, index) => {
-                    const itemIndex = parseInt(item.getAttribute('data-index'));
-                    const reverseIndex = stackItems.length - 1 - index;
-
-                    // Each item animates at a different rate
-                    const itemProgress = Math.min(Math.max((scrollProgress - index * 0.15) / 0.7, 0, 1));
-
-                });
-            }
-
-            // Initialize
-            setupInitialStack();
-            window.addEventListener('scroll', animateOnScroll);
-            window.addEventListener('resize', function () {
-                // container.style.height = '225vh'; // Reset container height on resize
-            });
-        });
-    </script>
+    <script src="/services/services.js"></script>
+    <script src="/navigation.js"></script>
+   
 </body>
 
 </html>
