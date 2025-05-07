@@ -56,7 +56,7 @@ document.addEventListener('DOMContentLoaded', function () {
         newBg.style.backgroundSize = 'cover';
         newBg.style.backgroundPosition = 'center';
         newBg.style.backgroundRepeat = 'no-repeat';
-        newBg.style.filter = ' brightness(0.3)';
+        newBg.style.filter = ' brightness(0.15)';
         newBg.style.zIndex = '1';
         newBg.style.opacity = '0';
         newBg.style.transition = 'opacity 0.2s ease-in-out';
