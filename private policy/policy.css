@@ -15,7 +15,7 @@ nav {
 
 
 .Privacy-policy-logo img {
-    height: 80px;
+    height: 50px;
     width: auto;
 }
 
@@ -181,7 +181,7 @@ footer {
     margin: 0px 20px;
     display: flex;
     flex-direction: row;
-    gap: 15px;
+    gap: 30px;
 }
 
 .end-content {
