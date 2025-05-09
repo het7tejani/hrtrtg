@@ -387,19 +387,19 @@ body {
 
 /* digital data */
 
-.elementor-container{
+.elementor-container {
   background: url(/home/digital\ bg.png) no-repeat center center/cover;
   max-width: 1536px;
   padding: 30px;
   margin: 0 auto;
 }
 
-.dgt-fid-title{
+.dgt-fid-title {
   color: var(--primary-xdark);
   margin-top: 15px;
 }
 
-.dgt-fid-contents h1{
+.dgt-fid-contents h1 {
   color: var(--primary-xdark);
 }
 
@@ -410,14 +410,15 @@ body {
   margin: 25px auto;
 }
 
-.dgt-fid{
+.dgt-fid {
   text-align: center;
 }
 
 .dgt-fid-contents h1 {
   position: relative;
   display: inline-block;
-  padding-right: 0.5em; /* Space for the plus symbol */
+  padding-right: 0.5em;
+  /* Space for the plus symbol */
 }
 
 .dgt-fid-contents h1 span:last-child,
@@ -425,9 +426,11 @@ body {
   position: absolute;
   top: 0;
   right: 0;
-  font-size: 0.7em; /* Smaller than the number */
+  font-size: 0.7em;
+  /* Smaller than the number */
   line-height: 1;
-  transform: translateY(-30%); /* Adjust this to fine-tune vertical position */
+  transform: translateY(-30%);
+  /* Adjust this to fine-tune vertical position */
   color: var(--primary-xdark);
   font-weight: bold;
 }
@@ -599,6 +602,8 @@ body {
   margin-right: 15px;
   margin-bottom: 15px;
 }
+
+
 
 .featured-image img {
   max-width: 100%;

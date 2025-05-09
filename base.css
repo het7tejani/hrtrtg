@@ -460,6 +460,22 @@ video {
     width: 100%
 }
 
+.fixed-bg-section {
+    /* Section styling */
+    min-height: 100vh; /* Adjust height as needed */
+    padding: 2rem;
+    
+    /* Fixed background */
+    background-image: url('/wave.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* This keeps the BG fixed */
+    background-repeat: no-repeat;
+    
+    /* Ensures content scrolls normally */
+    overflow: auto;
+  }
+
 .between-section-down {
     height: 94px;
     width: 100%;
