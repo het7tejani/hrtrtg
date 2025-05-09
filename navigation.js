@@ -163,3 +163,43 @@
             }))
         })()
 }();
+
+
+
+
+// smoot scrolling anchor tag 
+
+document.addEventListener('DOMContentLoaded', function () {
+    // Select all anchor tags with href starting with #
+    const anchorLinks = document.querySelectorAll('a[href^="#"]');
+
+    // Add click event listener to each anchor link
+    anchorLinks.forEach(link => {
+        link.addEventListener('click', function (e) {
+            // Prevent default anchor behavior
+            e.preventDefault();
+
+            // Get the target element's ID from the href attribute
+            const targetId = this.getAttribute('href');
+            if (targetId === '#') return; // Skip if href is just #
+
+            // Find the target element
+            const targetElement = document.querySelector(targetId);
+            if (!targetElement) return; // Exit if target doesn't exist
+
+            // Calculate the target position (accounting for fixed headers if needed)
+            const headerOffset = 80; // Adjust this value to match your header height
+            const elementPosition = targetElement.getBoundingClientRect().top;
+            const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+            // Smooth scroll to the target
+            window.scrollTo({
+                top: offsetPosition,
+                behavior: 'smooth'
+            });
+
+            // Update URL (optional)
+            history.pushState(null, null, targetId);
+        });
+    });
+});
