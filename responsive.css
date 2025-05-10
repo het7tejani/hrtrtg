@@ -9,6 +9,13 @@
     padding: 20px;
   }
 
+    .bg_vector,
+    .bg_vector_blue_top_left,
+    .bg_vector_blue_bottom_right {
+      display: none;
+    }
+
+
 
 
   /* ---------------------------------------------------------------------- */
