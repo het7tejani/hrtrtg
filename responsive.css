@@ -354,12 +354,30 @@
 
   @media (min-width: 375px) and (max-width: 575px) {
     .footer-content {
+      padding: 0;
       display: flex;
-      flex-direction: column;
+      flex-direction: column-reverse;
+      /* justify-content: space-between; */
     }
 
     .footer-contact p {
       justify-content: center;
+    }
+  }
+
+  @media (max-width: 1025px) {
+
+    .footer-content {
+      grid-template-columns: 1.3fr 1fr 0fr;
+
+    }
+
+    .footer-Navigation{
+      padding-top: 20px;
+    }
+
+    .footer-list {
+      display: none;
     }
   }
 
@@ -1122,4 +1140,64 @@
     }
 
   }
+
+  /* -------------------------------------------------------------------------------------------------------- */
+  /*  policy */
+  /* -------------------------------------------------------------------------------------------------------- */
+
+  /* Tablet Styles (min-width: 768px) */
+  @media (max-width:768px) {
+    nav {
+      padding: 20px 30px;
+    }
+
+    .inner-nav-up {
+      flex-direction: row;
+      justify-content: space-between;
+      padding-bottom: 20px;
+    }
+
+    .Privacy-policy-logo img {
+      margin-bottom: 0;
+    }
+
+
+
+    .policy-container {
+      flex-direction: row;
+      padding: 30px;
+    }
+
+    .policy-content {
+      padding-right: 30px;
+    }
+
+    .sidebar {
+      display: none;
+    }
+
+    .policy-footer-content {
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 5px;
+    }
+
+    .footer-item {
+      flex-direction: row;
+      margin: 0 10px;
+    }
+
+    .copyright {
+      border: none;
+      padding: 0;
+    }
+
+    .end-content {
+      flex-direction: column;
+      width: auto;
+      gap: 15px;
+    }
+  }
+
+
 }

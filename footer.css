@@ -32,7 +32,9 @@
   /* border-top: 1px solid rgba(255, 255, 255, 0.1); */
 }
 
-.footer-links {
+
+.footer-links,
+.footer-list {
   list-style: none;
 }
 
@@ -40,7 +42,8 @@
   margin-bottom: 10px;
 }
 
-.footer-links a {
+.footer-links,
+.footer-list a {
   color: var(--gray);
   text-decoration: none;
   transition: color 0.3s ease;
@@ -169,6 +172,10 @@
 
   .project-card {
     height: 280px;
+  }
+
+  .footer-list{
+    display: none;
   }
 
   .py-80 {
