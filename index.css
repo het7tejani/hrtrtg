@@ -504,46 +504,67 @@ body {
 
 
 /* history section  */
-.home-container {
-  margin: 0px auto;
+/* Container with relative positioning for absolute child */
+.history-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden; /* Prevent background from causing scroll */
 }
 
+
+/* Content sections styling */
+.featured-right {
+  position: relative; /* Establish new stacking context */
+  z-index: 2; /* Higher than background */
+  padding: 60px 0;
+}
+
+/* Your existing grid layout - modified for proper layering */
 .featured-right .home-container {
+  margin: 0 auto;
   padding: 20px;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  /* Two equal columns */
   gap: 30px;
-  /* Space between columns */
   align-items: center;
-  /* Vertically align items */
+  position: relative; /* Ensure content stays above background */
+  z-index: 2; /* Higher than background */
+  max-width: 1200px; /* Added for better control */
 }
 
+/* Content blocks styling */
+.side-content-wrapper,
 .side-featured-wrapper {
   padding: 20px;
+  background:transparent;
+  border-radius: 15px;
+  will-change: transform, opacity;
 }
 
 .featured-image img {
   border-radius: 20px;
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
-.content-wrap {
-  text-align: center;
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .featured-right .home-container {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .featured-right {
+    padding: 40px 0;
+  }
+  
+  .side-content-wrapper,
+  .side-featured-wrapper {
+    padding: 15px;
+  }
 }
 
-.side-content-wrapper,
-.side-featured-wrapper {
-  will-change: transform, opacity;
-  /* Optimize for animations */
-}
-
-.home-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  overflow: hidden;
-  /* Prevent horizontal scroll during animation */
-}
 
 /* For mobile responsiveness */
 @media (max-width: 768px) {

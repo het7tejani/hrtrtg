@@ -310,8 +310,6 @@
         .consulting-container {
             background-color: var(--neutral-blue);
             padding: 0rem 10rem;
-            /* max-width: full; */
-            /* margin: 0 auto; */
             display: flex;
             align-items: center;
             min-height: 100vh;

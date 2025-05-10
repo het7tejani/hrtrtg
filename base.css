@@ -11,7 +11,7 @@
     --secondary-red: #ff617d;
     --secondary-yellow: #ffd75c;
     --secondary-golden: #ffb500;
-    --secondary-purple: #8e92df; 
+    --secondary-purple: #8e92df;
     --tertiary-blue: #688bff;
     --tertiary-blue-dark: #898eba;
     --neutral-blue: #edf8fe;
@@ -462,19 +462,119 @@ video {
 
 .fixed-bg-section {
     /* Section styling */
-    min-height: 100vh; /* Adjust height as needed */
+    min-height: 100vh;
+    /* Adjust height as needed */
     padding: 2rem;
-    
+
     /* Fixed background */
     background-image: url('/wave.png');
     background-size: cover;
     background-position: center;
-    background-attachment: fixed; /* This keeps the BG fixed */
+    background-attachment: fixed;
+    /* This keeps the BG fixed */
     background-repeat: no-repeat;
-    
+
     /* Ensures content scrolls normally */
     overflow: auto;
-  }
+}
+
+.bg_vector {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    opacity: 0.05;
+    z-index: -10;
+}
+
+/* Background vector styling - now properly behind content */
+.bg_vector_blue_top_left {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    z-index: 1;
+    /* Lower than content */
+    pointer-events: none;
+    /* Allows clicks to pass through to content */
+}
+
+.bg_vector_blue_top_left img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.05;
+    /* Adjust as needed */
+}
+
+.bg_vector_blue_bottom_right {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: auto;
+    z-index: 1;
+    /* Lower than content */
+    pointer-events: none;
+    /* Allows clicks to pass through to content */
+}
+
+.bg_vector_blue_bottom_right img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.05;
+    /* Adjust as needed */
+}
+
+
+
+/* Animation styles (keep your existing animations) */
+.kd-animated {
+    opacity: 0;
+}
+
+.fadeInLeft,
+.fadeInRight {
+    animation-fill-mode: both;
+}
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.fadeInLeft {
+    animation-name: fadeInLeft;
+    animation-duration: 1s;
+}
+
+.fadeInRight {
+    animation-name: fadeInRight;
+    animation-duration: 1s;
+}
+
+
+
 
 .between-section-down {
     height: 94px;
@@ -1649,12 +1749,12 @@ a.nav-item {
     }
 
     .dropdown__bg.open {
-       
+
         opacity: 1
     }
 
     .dropdown__arrow {
-        background-color:  #fff;
+        background-color: #fff;
         border-radius: 3px;
         content: "";
         height: 22px;
@@ -1692,7 +1792,7 @@ a.nav-item {
     max-width: 1200px;
     display: flex;
     flex-direction: column;
-    flex-wrap:nowrap;
+    flex-wrap: nowrap;
 }
 
 .dropdown-section-container {
@@ -1807,4 +1907,3 @@ a.nav-item {
 ------------------------------------------------------------------------------------
 ------------------------------------------------------------------------------------
 ------------------------------------------------------------------------------------ */
-
